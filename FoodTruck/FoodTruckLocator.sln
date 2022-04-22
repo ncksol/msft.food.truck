@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodTruckLocator.Function", "FoodTruck\FoodTruckLocator.Function.csproj", "{9F575277-D427-426D-9F9E-B048C4EB4CC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodTruckLocator.Data", "FoodTruck.Data\FoodTruckLocator.Data.csproj", "{F72E951E-0AEF-422A-B80E-4FC159FA8A62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F6582074-B835-46C1-87DD-20A354E08F54}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F575277-D427-426D-9F9E-B048C4EB4CC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F575277-D427-426D-9F9E-B048C4EB4CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F575277-D427-426D-9F9E-B048C4EB4CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F575277-D427-426D-9F9E-B048C4EB4CC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F72E951E-0AEF-422A-B80E-4FC159FA8A62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F72E951E-0AEF-422A-B80E-4FC159FA8A62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F72E951E-0AEF-422A-B80E-4FC159FA8A62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F72E951E-0AEF-422A-B80E-4FC159FA8A62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C7AF5AE-E5D6-472D-A54A-A31C095A8B9C}
+	EndGlobalSection
+EndGlobal
