@@ -3,14 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodTruckLocator.Function", "src\FoodTruckLocator.Function\FoodTruckLocator.Function.csproj", "{9F575277-D427-426D-9F9E-B048C4EB4CC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodTruckLocator.Function", "src\FoodTruckLocator.Function\FoodTruckLocator.Function.csproj", "{9F575277-D427-426D-9F9E-B048C4EB4CC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodTruckLocator.Data", "src\FoodTruckLocator.Data\FoodTruckLocator.Data.csproj", "{F72E951E-0AEF-422A-B80E-4FC159FA8A62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodTruckLocator.Data", "src\FoodTruckLocator.Data\FoodTruckLocator.Data.csproj", "{F72E951E-0AEF-422A-B80E-4FC159FA8A62}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F6582074-B835-46C1-87DD-20A354E08F54}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BD95833C-ED05-4495-A3ED-FB800811A549}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F9EFBB52-4C96-41F1-90DF-8215AB657177}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodTrucLocator.Test", "test\FoodTrucLocator.Test\FoodTrucLocator.Test.csproj", "{38E7D060-DC48-4893-A474-76F150CDCF9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,9 +32,18 @@ Global
 		{F72E951E-0AEF-422A-B80E-4FC159FA8A62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F72E951E-0AEF-422A-B80E-4FC159FA8A62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F72E951E-0AEF-422A-B80E-4FC159FA8A62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38E7D060-DC48-4893-A474-76F150CDCF9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38E7D060-DC48-4893-A474-76F150CDCF9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38E7D060-DC48-4893-A474-76F150CDCF9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38E7D060-DC48-4893-A474-76F150CDCF9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9F575277-D427-426D-9F9E-B048C4EB4CC8} = {BD95833C-ED05-4495-A3ED-FB800811A549}
+		{F72E951E-0AEF-422A-B80E-4FC159FA8A62} = {BD95833C-ED05-4495-A3ED-FB800811A549}
+		{38E7D060-DC48-4893-A474-76F150CDCF9B} = {F9EFBB52-4C96-41F1-90DF-8215AB657177}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0C7AF5AE-E5D6-472D-A54A-A31C095A8B9C}

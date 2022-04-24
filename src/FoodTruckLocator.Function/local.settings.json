@@ -1,6 +1,8 @@
 ﻿{
     "IsEncrypted": false,
     "Values": {
+        "GetTrucksCount" :  5,
+        "ShowHealthCheckExceptions" :  true,
         "AzureWebJobsStorage": "",
         "FUNCTIONS_WORKER_RUNTIME": "dotnet"
     }

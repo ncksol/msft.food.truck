@@ -12,12 +12,11 @@ namespace FoodTruckLocator.Data.Extensions
     {
         public static void DataService(this IServiceCollection services)
         {
-            // configuration
-            //services.AddScoped<AzureAuthenticationHandler>();
-
             // services
             services.AddScoped<IDataSFService, DataSFService>();
-            
+            services.AddTransient<IDataLoaderService, FileDataLoaderService>();
+            services.AddTransient<IValidationService, ValidationService>();
+
             // telemetry
             /*services.AddApplicationInsightsTelemetry();
             services.AddScoped(typeof(ITelemetryService), typeof(TelemetryService));

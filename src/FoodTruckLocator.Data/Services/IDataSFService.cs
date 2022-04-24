@@ -4,6 +4,7 @@ namespace FoodTruckLocator.Data.Services
 {
     public interface IDataSFService
     {
-        FoodTruck GetFoodTruck(double latitude, double longitude);
+        double CalculateDistance(double originalLatitude, double originalLongitude, double targetLatitude, double targetLongitude);
+        IEnumerable<FoodTruck> GetFoodTruck(double latitude, double longitude);
     }
 }
