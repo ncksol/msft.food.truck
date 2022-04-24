@@ -23,7 +23,7 @@ namespace FoodTruckLocator.Function
         private readonly IValidationService _validationService;
 
         public GetFoodTrucksFunction(
-            ILogger<GetFoodTrucksFunction> log, 
+            ILogger<GetFoodTrucksFunction> log,
             IDataSFService dataSFService,
             IValidationService validationService
             )
@@ -45,9 +45,9 @@ namespace FoodTruckLocator.Function
                 return HandleBadRequest(nameof(latitude));
 
             if (double.TryParse(longitude, out var dLongitude) == false)
-                return HandleBadRequest(nameof(latitude));
+                return HandleBadRequest(nameof(longitude));
 
-            if(_validationService.ValidateCoordinates(dLatitude, dLongitude) == false)
+            if (_validationService.ValidateCoordinates(dLatitude, dLongitude) == false)
                 return new BadRequestObjectResult($"Invalid coordinates");
 
             var trucks = _dataSFService.GetFoodTruck(dLatitude, dLongitude);

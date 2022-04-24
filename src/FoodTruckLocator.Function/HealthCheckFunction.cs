@@ -14,6 +14,7 @@ using System.Linq;
 using System.Diagnostics;
 using Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes;
 using Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Enums;
+using FoodTruckLocator.Data.Models;
 
 namespace FoodTruckLocator.Function
 {
@@ -33,7 +34,7 @@ namespace FoodTruckLocator.Function
 
         [FunctionName("HealthCheckFunction")]
         [OpenApiOperation(operationId: "HealthCheck", tags: new[] { "HealthCheck" }, Summary = "Health Check", Description = "Provides a health check of the function and dependant components.", Visibility = OpenApiVisibilityType.Important)]
-        [OpenApiResponseWithBody(statusCode: HttpStatusCode.OK, contentType: "application/json", bodyType: typeof(HealthReport), Summary = "JSON representation of function health", Description = "Provides a health check of the function and dependant components.")]
+        [OpenApiResponseWithBody(statusCode: HttpStatusCode.OK, contentType: "application/json", bodyType: typeof(HealthCheckReport), Summary = "JSON representation of function health", Description = "Provides a health check of the function and dependant components.")]
         public async Task<IActionResult> HealthCheck(
             [HttpTrigger(AuthorizationLevel.Anonymous, nameof(HttpMethods.Get), Route = $"{nameof(HealthCheck)}")]
             HttpRequest req)
@@ -53,13 +54,13 @@ namespace FoodTruckLocator.Function
             }
         }
 
-        private object ProcessHealthReport(HealthReport report) => new
+        private HealthCheckReport ProcessHealthReport(HealthReport report) => new()
         {
             Status = report.Status.ToString(),
             TotalDuration = report.TotalDuration,
             Entries = report.Entries.ToDictionary(
                 entry => entry.Key,
-                entry => new
+                entry => new HealthCheckReportEntry()
                 {
                     Status = entry.Value.Status.ToString(),
                     Description = entry.Value.Description,

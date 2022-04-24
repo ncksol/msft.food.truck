@@ -24,7 +24,9 @@ namespace FoodTruckLocator.Function.HealthChecks
         {
             try
             {
-                return _fileDataLoaderService.HealthCheck() ?
+                var healthCheck = _fileDataLoaderService.HealthCheck();
+
+                return healthCheck ?
                     Task.FromResult(HealthCheckResult.Healthy()) :
                     Task.FromResult(HealthCheckResult.Unhealthy());
             }
