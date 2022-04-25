@@ -1,2 +1,4 @@
 # San Francisco Food Truck Locator Service
-Microsoft Take Home Engineering Challenge
+This service allows users to find food trucks closest to a specific location within San Francisco.
+
+## Component Diagram
