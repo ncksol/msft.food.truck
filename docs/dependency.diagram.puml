@@ -8,12 +8,12 @@ legend
 endlegend
 
 database "Food Trucks\nDB" as DB #LightYellow
-component [APIM] #LightYellow
+component [Front Door] as FD #LightYellow
 component [Data Refresh\nService] as DRS #LightYellow
 component [Food Truck Locator\nService] as FTLS #LightGreen
 component [SF Data Service] as SFDS #LightBlue
 
-[APIM]--> [FTLS]
+[FD]--> [FTLS]
 [FTLS]--> [SFDS]
 [FTLS]-> DB
 [DRS]-> [FTLS]
