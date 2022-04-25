@@ -37,11 +37,14 @@
 
   <ItemGroup>
     <Reference Include="FunctionTestServer">
-      <HintPath>C:\Users\nicks\OneDrive\Desktop\NewDay.Stratus.FunctionTestServer\src\NewDay.Stratus.FunctionTestServer\bin\Release\net6.0\FunctionTestServer.dll</HintPath>
+      <HintPath>FunctionTestServer.dll</HintPath>
     </Reference>
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="FunctionTestServer.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Stubs\dataStub.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
