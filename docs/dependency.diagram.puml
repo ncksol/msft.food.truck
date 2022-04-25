@@ -1,0 +1,20 @@
+@startuml
+skinparam DefaultTextAlignment center
+
+legend
+|<back:#lightgreen>    </back>| Deployed Service Resource |
+|<back:#lightblue>    </back>| External Resource |
+|<back:#lightyellow>    </back>| Planned Service Resource |
+endlegend
+
+database "Food Trucks\nDB" as DB #LightYellow
+component [APIM] #LightYellow
+component [Data Refresh\nService] as DRS #LightYellow
+component [Food Truck Locator\nService] as FTLS #LightGreen
+component [SF Data Service] as SFDS #LightBlue
+
+[APIM]--> [FTLS]
+[FTLS]--> [SFDS]
+[FTLS]-> DB
+[DRS]-> [FTLS]
+@enduml
